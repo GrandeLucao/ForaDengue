@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class gameController : MonoBehaviour
 {
     public int foundItens;
+    public int minItens;
     public int totalItens;
     public static gameController instance;
 
@@ -16,6 +17,7 @@ public class gameController : MonoBehaviour
     public GameObject startScreen;
     public GameObject UIOffScreen;
     private bool gameWin, gameLose, gamePause;
+    public bool gameStart;
 
     public float TimeLeft;
     public bool TimerOn=false;
@@ -28,6 +30,7 @@ public class gameController : MonoBehaviour
         gameWin=false;
         gameLose=false;
         gamePause=false;
+        gameStart=false;
     }
 
     void Start()
@@ -40,6 +43,8 @@ public class gameController : MonoBehaviour
         //GamePause();
         if(TimerOn)
         {
+            if(foundItens>=minItens)
+                GameWin();
             if(TimeLeft>0)
             {
                 TimeLeft-=Time.deltaTime;
@@ -48,7 +53,8 @@ public class gameController : MonoBehaviour
             else{
                 TimeLeft=0;
                 TimerOn=false;
-                GameOver();
+                if(minItens>foundItens)
+                    GameOver();
             }
         }
         
@@ -66,18 +72,27 @@ public class gameController : MonoBehaviour
     public void StartGame(){
         startScreen.SetActive(false);
         UIOffScreen.SetActive(true);
+        gameStart=true;
         TimerOn=true;
     }
 
     public void GameOver()
     {
         gameOverObj.SetActive(true);
+        gameStart=false;
+    }
+
+    public void GameWin()
+    {
+        gameWinObj.SetActive(true);
+        TimerOn=false;
     }
 
     public void GamePause()
     {
         TimerOn=false;
         pauseScreen.SetActive(true);
+        gameStart=false;
     }
 
     public void StartScreen()
