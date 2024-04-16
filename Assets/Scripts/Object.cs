@@ -6,11 +6,13 @@ public class Object : MonoBehaviour
 {
     public bool clickable;
     private bool changeInstance;
+    private Animator anim;
     
 
     void Start()
     {
         changeInstance=true;
+        anim=GetComponent<Animator>();
     }
 
     void Update()
@@ -28,7 +30,7 @@ public class Object : MonoBehaviour
         if (clickable && Input.GetMouseButtonDown(0) && this.CompareTag("Focos"))
         {
             gameController.instance.foundItens+=1;
-            // animation.play
+            anim.SetTrigger("clicked");
             this.clickable=false;
         }else{
             //animation play

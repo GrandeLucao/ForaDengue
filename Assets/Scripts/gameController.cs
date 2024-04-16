@@ -107,11 +107,12 @@ public class gameController : MonoBehaviour
 
     public void MenuGo()
     {
-            SceneManager.LoadScene(0);        
+            //SceneManager.LoadScene(0);    
+            Application.Quit();  //mudar dps pq tah sem menu pra agora (15/4/24)  
     }
 
     public void Restart()
     {
-            SceneManager.LoadScene(1);        
+            SceneManager.LoadScene(0);        
     }
 }
