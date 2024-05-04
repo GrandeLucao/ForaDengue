@@ -40,7 +40,6 @@ public class gameController : MonoBehaviour
 
     void Update()
     {
-        //GamePause();
         if(TimerOn)
         {
             if(foundItens>=minItens)
@@ -95,6 +94,13 @@ public class gameController : MonoBehaviour
         gameStart=false;
     }
 
+    public void GameUnpause()
+    {
+        TimerOn=true;
+        pauseScreen.SetActive(false);
+        gameStart=true;
+    }
+
     public void StartScreen()
     {
         startScreen.SetActive(true);
@@ -110,8 +116,15 @@ public class gameController : MonoBehaviour
             SceneManager.LoadScene(0);    
     }
 
-    public void Restart(int lvl)
+    public void Restart()
     {
+            int lvl=SceneManager.GetActiveScene().buildIndex;
             SceneManager.LoadScene(lvl);        
+    }
+
+    public void NextLevel()
+    {
+            int lvl=SceneManager.GetActiveScene().buildIndex;
+            SceneManager.LoadScene(lvl+1);        
     }
 }
