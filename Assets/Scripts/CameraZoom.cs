@@ -58,11 +58,13 @@ public class CameraZoom : MonoBehaviour
     }
 
     public void ZoomIn(){
+            FindObjectOfType<AudioManager>().Play("click");
         zoom-=scroll*zoomMultiplier;
         cam.transform.position=ClampCamera(cam.transform.position);
     }
 
     public void ZoomOut(){
+            FindObjectOfType<AudioManager>().Play("click");
         zoom+=scroll*zoomMultiplier;
         cam.transform.position=ClampCamera(cam.transform.position);
     }

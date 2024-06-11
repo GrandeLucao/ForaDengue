@@ -29,6 +29,7 @@ public class Object : MonoBehaviour
     {
         if (clickable && Input.GetMouseButtonDown(0) && this.CompareTag("Focos"))
         {
+            FindObjectOfType<AudioManager>().Play("WATERSPILL");
             gameController.instance.foundItens+=1;
             anim.SetTrigger("clicked");
             this.clickable=false;

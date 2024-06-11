@@ -23,5 +23,10 @@ public class MenuController : MonoBehaviour
     public void closeCredits(){
         creditScene.SetActive(false);
     }
+
+    public void MenuGo()
+    {
+            SceneManager.LoadScene(0);    
+    }
     
 }

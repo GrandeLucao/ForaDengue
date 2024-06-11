@@ -1,0 +1,117 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4676915880308423091
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6892988553515378768}
+  - component: {fileID: 6986529754136308039}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6892988553515378768
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4676915880308423091}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.585058, y: -0.9797568, z: -0.10492818}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6986529754136308039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4676915880308423091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 722d4bd7bd3451d3795a95acbac7bc76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: BGM
+    clip: {fileID: 8300000, guid: 8840e3bddf2f268699d321f2561f7801, type: 3}
+    volume: 0.7
+    panStereo: 0
+    spatialBlend: 0
+    loop: 1
+    source: {fileID: 0}
+  - name: WATERSPILL
+    clip: {fileID: 8300000, guid: 5b82fde6d68db036a84e6b5377c27e06, type: 3}
+    volume: 1
+    panStereo: 0
+    spatialBlend: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: rain
+    clip: {fileID: 8300000, guid: e5a3ae7fe7c5f1ac3816d0841a870d11, type: 3}
+    volume: 0.6
+    panStereo: 0.47
+    spatialBlend: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: click
+    clip: {fileID: 8300000, guid: f088e47b43ec2878eb0a6a4abb1d1263, type: 3}
+    volume: 1
+    panStereo: 0
+    spatialBlend: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: talk1
+    clip: {fileID: 8300000, guid: 0892ce5f76aae8468975eb5fd5cea2dc, type: 3}
+    volume: 1
+    panStereo: 0
+    spatialBlend: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: talk2
+    clip: {fileID: 8300000, guid: 15c7e19578832d84292a1df41f7e305d, type: 3}
+    volume: 1
+    panStereo: 0
+    spatialBlend: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: trash
+    clip: {fileID: 8300000, guid: 4f5f55f799cea96aaa90b9467265d6ea, type: 3}
+    volume: 1
+    panStereo: 0
+    spatialBlend: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: hop
+    clip: {fileID: 8300000, guid: b4ce74e7e3938cf04b3b6a3b9871eb77, type: 3}
+    volume: 1
+    panStereo: 0
+    spatialBlend: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: trans
+    clip: {fileID: 8300000, guid: 1888ad63da645987891682efb032da97, type: 3}
+    volume: 1
+    panStereo: 0
+    spatialBlend: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: wind
+    clip: {fileID: 8300000, guid: f3231db96cfa3a94b872e34fcb7fb94e, type: 3}
+    volume: 1
+    panStereo: 0
+    spatialBlend: 0
+    loop: 0
+    source: {fileID: 0}

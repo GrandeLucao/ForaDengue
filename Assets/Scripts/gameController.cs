@@ -77,6 +77,7 @@ public class gameController : MonoBehaviour
 
     public void GameOver()
     {
+            FindObjectOfType<AudioManager>().Play("wind");
         gameOverObj.SetActive(true);
         gameStart=false;
     }
@@ -89,6 +90,7 @@ public class gameController : MonoBehaviour
 
     public void GamePause()
     {
+            FindObjectOfType<AudioManager>().Play("hop");
         TimerOn=false;
         pauseScreen.SetActive(true);
         gameStart=false;
@@ -106,9 +108,9 @@ public class gameController : MonoBehaviour
         startScreen.SetActive(true);
     }
 
-    public void GameOverScene()
+    public void GameWinScene()
     {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(4);
     }
 
     public void MenuGo()
@@ -124,7 +126,13 @@ public class gameController : MonoBehaviour
 
     public void NextLevel()
     {
+            FindObjectOfType<AudioManager>().Play("trans");
             int lvl=SceneManager.GetActiveScene().buildIndex;
-            SceneManager.LoadScene(lvl+1);        
+            if(lvl>=2){SceneManager.LoadScene(4); }
+            else{SceneManager.LoadScene(lvl+1);  }      
+    }
+
+    public void ExitGame(){  
+            Application.Quit();  
     }
 }
