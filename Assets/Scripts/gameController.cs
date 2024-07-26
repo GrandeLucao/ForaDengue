@@ -59,6 +59,7 @@ public class gameController : MonoBehaviour
         
     }
 
+
     void updateTimer(float currentTime)
     {
         currentTime+=1;
@@ -128,7 +129,7 @@ public class gameController : MonoBehaviour
     {
             FindObjectOfType<AudioManager>().Play("trans");
             int lvl=SceneManager.GetActiveScene().buildIndex;
-            if(lvl>=2){SceneManager.LoadScene(4); }
+            if(lvl>=3){SceneManager.LoadScene(4); }
             else{SceneManager.LoadScene(lvl+1);  }      
     }
 
